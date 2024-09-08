@@ -1,4 +1,5 @@
 #!/usr/bin/zsh
+source ~/.zshrc
 
 cd "$(dirname "$0")"
 # Run the Go program
