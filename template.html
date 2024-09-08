@@ -26,92 +26,80 @@
   <link href='/static/css/normalize.css' type='text/css' rel='stylesheet' />
   <link href='/static/css/foundation.min.css' type='text/css' rel='stylesheet' />
   <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #333333;
+      --link-color: #0066cc;
+      --visited-link-color: #551a8b;
+      --header-border-color: #e0e0e0;
+      --active-color: #555555;
+      --hover-color: #000000;
+      --meta-color: #666666;
+    }
+
     @media (prefers-color-scheme: dark) {
-      body {
-        background-color: #1a1a1a;
-        color: #e0e0e0;
+      :root {
+        --bg-color: #1a1a1a;
+        --text-color: #e0e0e0;
+        --link-color: #4da6ff;
+        --visited-link-color: #b19cd9;
+        --header-border-color: #333333;
+        --active-color: #cccccc;
+        --hover-color: #ffffff;
+        --meta-color: #999999;
       }
+    }
 
-      a {
-        color: #6699cc;
-      }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
 
-      a:visited {
-        color: #9966cc;
-      }
-
-      header {
-        border-bottom-color: #333;
-      }
-
-      header h1 {
-        color: #e0e0e0;
-        text-shadow: 1px 1px 0 #000000, 2px 2px 0 #ff6600;
-      }
-
-      ol li.active,
-      ol li:hover {
-        color: #e0e0e0;
-      }
-
-      ol li {
-        color: #888;
-      }
-
-      .comments {
-        color: #777 !important;
-      }
-
-      footer {
-        border-top-color: #333;
-      }
-
-      .meta {
-        color: #777;
-      }
+    a {
+      color: var(--link-color);
     }
 
     a:visited {
-      color: #004c65;
+      color: var(--visited-link-color);
     }
 
     header {
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid var(--header-border-color);
       padding-bottom: 10px;
     }
 
     header h1 {
-      text-shadow: 1px 1px 0 #FFFFFF, 2px 2px 0 #ff6600;
+      text-shadow: 1px 1px 0 var(--bg-color), 2px 2px 0 #ff6600;
     }
 
     #explain {
       display: none;
     }
 
-    ol li.active {
-      color: #333;
+    ol li {
+      color: var(--meta-color);
     }
 
-    ol li {
-      color: #888;
+    ol li.active,
+    ol li:hover {
+      color: var(--active-color);
     }
 
     ol li:hover {
-      color: #333;
+      color: var(--hover-color);
     }
 
     .comments {
-      color: #999;
-      !important
+      color: var(--meta-color) !important;
     }
 
     footer {
-      border-top: 1px solid #eee;
+      border-top: 1px solid var(--header-border-color);
       padding-top: 10px;
     }
 
     .meta {
-      color: #999;
+      color: var(--meta-color);
     }
   </style>
 
