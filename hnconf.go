@@ -12,13 +12,12 @@ import (
 	"time"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/kardianos/osext"
 	"github.com/termie/go-shutil"
 )
 
 const (
 	ROOT_URL   string = "https://news.ycombinator.com"
-	TARGET_DIR string = "/var/www/hn"
+	TARGET_DIR string = "./dist"
 )
 
 type NewsItem struct {
@@ -138,10 +137,13 @@ func main() {
 		"fdate": DateFmt,
 	}
 
-	extDir, _ := osext.ExecutableFolder()
-	tmplPath := path.Join(extDir, "../src/github.com/ejamesc/go-hn-confidence", "template.html")
+	currentDir, _ := os.Getwd()
+	tmplPath := path.Join(currentDir, "template.html")
 	t := template.Must(template.New("template.html").Funcs(funcMap).ParseFiles(tmplPath))
-	filepath := path.Join(TARGET_DIR, "index.html")
+
+	buildDir := path.Join(currentDir, TARGET_DIR)
+
+	filepath := path.Join(buildDir, "index.html")
 	file, err := os.OpenFile(filepath, os.O_RDWR|os.O_TRUNC|os.O_CREATE, 0755)
 	if err != nil {
 		fmt.Println(err)
@@ -156,14 +158,15 @@ func main() {
 		fmt.Println(err)
 	}
 
-	staticPath := path.Join(extDir, "../src/github.com/ejamesc/go-hn-confidence", "static")
+	staticPath := path.Join(currentDir, "static")
+	buildStaticPath := path.Join(buildDir, "static")
 
 	// CopyTree demands that the destination folder not exist
 	// If it does, we delete it
-	outDir := path.Join(TARGET_DIR, "static")
-	_, err = os.Stat(outDir)
+
+	_, err = os.Stat(buildStaticPath)
 	if err == nil {
-		err = os.RemoveAll(outDir)
+		err = os.RemoveAll(buildStaticPath)
 		if err != nil {
 			fmt.Println(err)
 		}
@@ -182,10 +185,12 @@ func main() {
 		CopyFunction:           shutil.Copy,
 		Ignore:                 nil,
 	}
-	err = shutil.CopyTree(staticPath, outDir, options)
+	err = shutil.CopyTree(staticPath, buildStaticPath, options)
 	if err != nil {
 		fmt.Println(err)
 	}
+
+	fmt.Println("Build complete")
 }
 
 // Helpers

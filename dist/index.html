@@ -1,0 +1,337 @@
+<html>
+
+<head>
+  <title>Hacker News Confidence &middot; elijames.org</title>
+  <meta content='A mirror of Hacker News, sorted according to quality.' name='description' />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="apple-touch-icon" sizes="57x57" href="/static/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/static/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/static/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/static/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/static/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/static/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/static/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/static/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+  <link rel="manifest" href="/static/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/static/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href='/static/css/normalize.css' type='text/css' rel='stylesheet' />
+  <link href='/static/css/foundation.min.css' type='text/css' rel='stylesheet' />
+  <style>
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+      }
+
+      a {
+        color: #6699cc;
+      }
+
+      a:visited {
+        color: #9966cc;
+      }
+
+      header {
+        border-bottom-color: #333;
+      }
+
+      header h1 {
+        text-shadow: 1px 1px 0 #000000, 2px 2px 0 #ff6600;
+      }
+
+      ol li.active,
+      ol li:hover {
+        color: #e0e0e0;
+      }
+
+      ol li {
+        color: #888;
+      }
+
+      .comments {
+        color: #777 !important;
+      }
+
+      footer {
+        border-top-color: #333;
+      }
+
+      .meta {
+        color: #777;
+      }
+    }
+
+    a:visited {
+      color: #004c65;
+    }
+
+    header {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    header h1 {
+      text-shadow: 1px 1px 0 #FFFFFF, 2px 2px 0 #ff6600;
+    }
+
+    #explain {
+      display: none;
+    }
+
+    ol li.active {
+      color: #333;
+    }
+
+    ol li {
+      color: #888;
+    }
+
+    ol li:hover {
+      color: #333;
+    }
+
+    .comments {
+      color: #999;
+      !important
+    }
+
+    footer {
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+    }
+
+    .meta {
+      color: #999;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class='row'>
+    <header class='small-12 columns'>
+      <h1 class='text-center'>Hacker News Confidence</h1>
+      <p class='text-center'>Less annoying hacker news. (<a onclick="toggle('explain')">What is this?</a>)</p>
+      <p id='explain'>This site scrapes Hacker News once every 30 minutes, then sorts according to <a
+          href="http://www.evanmiller.org/how-not-to-sort-by-average-rating.html">this formula</a>, with upvotes as
+        positive signals and comments as negative ones. In my experience, the best articles to read on HN are the ones
+        with a high upvote-to-discussion ratio. Mostly because controversial pieces tend to produce a disproportionate
+        number of comments compared to upvotes.</p>
+    </header>
+  </div>
+  <div class='row'>
+    <div class='small-12 medium-10 medium-offset-1 columns'>
+      <br />
+      <ol>
+        
+        <li class='active' >
+          <a href="https://citizen-dj.labs.loc.gov/">CitizenDJ – Make music using free audio and video from the Library of Congress</a>
+          <span class='meta'>119 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41475998">6
+              comments</a></span>
+        </li>
+        
+        <li class='active' >
+          <a href="https://thehighergeometer.wordpress.com/2024/09/08/two-items-a-new-rare-high-rank-elliptic-curve-and-a-beautifully-organised-orchard-of-diophantine-equations/">A new rare high-rank elliptic curve, and an orchard of Diophantine equations</a>
+          <span class='meta'>158 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41475177">10
+              comments</a></span>
+        </li>
+        
+        <li class='active' >
+          <a href="https://www.humprog.org/~stephen/blog/2024/08/27/#how-to-wrap-cc-really">How to wrap a C compiler and preprocessor, really</a>
+          <span class='meta'>41 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41463124">1
+              comments</a></span>
+        </li>
+        
+        <li class='active' >
+          <a href="https://blog.jgc.org/2024/09/cracking-old-zip-file-to-help-open.html">Cracking an old ZIP file to help open source the ANC&#39;s &#34;Vula&#34; secret crypto code</a>
+          <span class='meta'>170 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41474828">18
+              comments</a></span>
+        </li>
+        
+        <li class='active' >
+          <a href="https://bernsteinbear.com/blog/fenster-microui/">Microui&#43;fenster=Small GUI</a>
+          <span class='meta'>61 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41477446">6
+              comments</a></span>
+        </li>
+        
+        <li class='active' >
+          <a href="https://github.com/weinberg/SQLToy/wiki">SQLToy</a>
+          <span class='meta'>63 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41467054">8
+              comments</a></span>
+        </li>
+        
+        <li class='active' >
+          <a href="https://hazelweakly.me/blog/pick-your-distributed-poison/">Pick Your Distributed Poison</a>
+          <span class='meta'>78 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41448799">11
+              comments</a></span>
+        </li>
+        
+        <li class='active' >
+          <a href="https://athikerpictures.org/">Appalachian Trail Hiker Photo Archive</a>
+          <span class='meta'>81 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41476823">18
+              comments</a></span>
+        </li>
+        
+        <li class='active' >
+          <a href="https://www.artic.edu/articles/1139/10-things-to-know-about-the-great-wave">Things to know about the Great Wave</a>
+          <span class='meta'>216 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41474449">65
+              comments</a></span>
+        </li>
+        
+        <li class='active' >
+          <a href="https://purplesyringa.moe/blog/webp-the-webpage-compression-format/">WebP: The WebPage Compression Format</a>
+          <span class='meta'>374 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41475124">136
+              comments</a></span>
+        </li>
+        
+        <li >
+          <a href="https://www.datagubbe.se/gnomefiles/">Gnome Files: A detailed UI examination</a>
+          <span class='meta'>164 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41476873">65
+              comments</a></span>
+        </li>
+        
+        <li >
+          <a href="https://massgrave.dev/blog/keyhole">Keyhole – Forge own Windows Store licenses</a>
+          <span class='meta'>525 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41472643">247
+              comments</a></span>
+        </li>
+        
+        <li >
+          <a href="https://www.alphaxiv.org/">An open discussion forum for ArXiv papers</a>
+          <span class='meta'>11 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41478690">1
+              comments</a></span>
+        </li>
+        
+        <li >
+          <a href="https://www.theguardian.com/science/article/2024/sep/04/dogs-remember-names-toys-years-study-pets-memory">Dogs can remember names of toys years after not seeing them, study shows</a>
+          <span class='meta'>222 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41440997">106
+              comments</a></span>
+        </li>
+        
+        <li >
+          <a href="https://www.ben-evans.com/benedictevans/2017/01/11/wrongquestions">Asking the Wrong Questions (2017)</a>
+          <span class='meta'>106 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41458646">46
+              comments</a></span>
+        </li>
+        
+        <li >
+          <a href="https://sunshowers.io/posts/beyond-ctrl-c-signals/">Beyond Ctrl-C: The dark corners of Unix signal handling</a>
+          <span class='meta'>73 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41449625">33
+              comments</a></span>
+        </li>
+        
+        <li >
+          <a href="https://graydon2.dreamwidth.org/313862.html">The PERQ Computer</a>
+          <span class='meta'>165 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41472855">90
+              comments</a></span>
+        </li>
+        
+        <li >
+          <a href="https://subtledigressions.substack.com/p/hallelujah-leonard-cohen-and-a-pulitzer">Hallelujah, Leonard Cohen, and a Pulitzer Prize-winning writer&#39;s suicide</a>
+          <span class='meta'>129 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41475618">69
+              comments</a></span>
+        </li>
+        
+        <li >
+          <a href="https://www.quantamagazine.org/groups-underpin-modern-math-heres-how-they-work-20240906/">Groups underpin modern math</a>
+          <span class='meta'>61 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41470518">29
+              comments</a></span>
+        </li>
+        
+        <li >
+          <a href="https://misinforeview.hks.harvard.edu/article/gpt-fabricated-scientific-papers-on-google-scholar-key-features-spread-and-implications-for-preempting-evidence-manipulation/">GPT-fabricated scientific papers on Google Scholar</a>
+          <span class='meta'>125 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41477516">69
+              comments</a></span>
+        </li>
+        
+        <li >
+          <a href="https://conspirator0.substack.com/p/baiting-the-bot">Baiting the bot</a>
+          <span class='meta'>45 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41478138">20
+              comments</a></span>
+        </li>
+        
+        <li >
+          <a href="http://www.tecr.com/galactica/">Battlestar Galactica: Technical Manual (2005)</a>
+          <span class='meta'>16 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41458168">5
+              comments</a></span>
+        </li>
+        
+        <li >
+          <a href="https://mnmlist.com/w/">Minimal Web</a>
+          <span class='meta'>12 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41478363">3
+              comments</a></span>
+        </li>
+        
+        <li >
+          <a href="https://www.science.org/doi/10.1126/sciadv.adp1295">Early science and stone engineering in Menga, a Neolithic dolmen</a>
+          <span class='meta'>4 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41451540">0
+              comments</a></span>
+        </li>
+        
+        <li >
+          <a href="https://futurerack.info/main.php">FutureRack: Server racks are everywhere. Now you can find them in your home</a>
+          <span class='meta'>26 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41477782">14
+              comments</a></span>
+        </li>
+        
+        <li >
+          <a href="https://www.theparisreview.org/blog/2024/09/04/against-rereading/">Against Rereading</a>
+          <span class='meta'>51 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41467675">37
+              comments</a></span>
+        </li>
+        
+        <li >
+          <a href="https://vincents.dev/blog/creating-a-search-engine/?">Creating a search engine for fun and because Google sucks</a>
+          <span class='meta'>16 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41478785">9
+              comments</a></span>
+        </li>
+        
+        <li >
+          <a href="https://chadnauseam.com/coding/random/my-new-rust-binary-search">my-new-rust-binary-search</a>
+          <span class='meta'>49 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41475760">50
+              comments</a></span>
+        </li>
+        
+        <li >
+          <a href="https://rubenerd.com/the-email-is-authentication-pattern/">The &#34;email is authentication&#34; pattern</a>
+          <span class='meta'>181 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41475218">265
+              comments</a></span>
+        </li>
+        
+        <li >
+          <a href="https://basis-robotics.github.io/basis-website/2024/09/02/determinism/">(Fixing) Determinism in Robotics Testing</a>
+          <span class='meta'>10 upvotes, <a class="comments" href="https://news.ycombinator.com/item?id=41441530">7
+              comments</a></span>
+        </li>
+        
+      </ol>
+    </div>
+  </div>
+  <div class='row'>
+    <footer>
+      <p class='text-center'>Last generated 3:54pm, 8 September 2024. Source <a
+          href='https://github.com/ejamesc/go-hn-confidence'>here</a>.</p>
+    </footer>
+  </div>
+</body>
+<script type='text/javascript'>
+  function toggle(id) {
+    var el = document.getElementById(id);
+    if (el.style.display == "none" || el.style.display == "") {
+      el.style.display = "block";
+    } else {
+      el.style.display = "none";
+    }
+  }
+</script>
+
+</html>

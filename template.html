@@ -1,6 +1,7 @@
 <html>
+
 <head>
-<title>Hacker News Confidence &middot; elijames.org</title>
+  <title>Hacker News Confidence &middot; elijames.org</title>
   <meta content='A mirror of Hacker News, sorted according to quality.' name='description' />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
@@ -13,7 +14,7 @@
   <link rel="apple-touch-icon" sizes="144x144" href="/static/apple-icon-144x144.png">
   <link rel="apple-touch-icon" sizes="152x152" href="/static/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/static/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/static/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
@@ -25,6 +26,50 @@
   <link href='/static/css/normalize.css' type='text/css' rel='stylesheet' />
   <link href='/static/css/foundation.min.css' type='text/css' rel='stylesheet' />
   <style>
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+      }
+
+      a {
+        color: #6699cc;
+      }
+
+      a:visited {
+        color: #9966cc;
+      }
+
+      header {
+        border-bottom-color: #333;
+      }
+
+      header h1 {
+        text-shadow: 1px 1px 0 #000000, 2px 2px 0 #ff6600;
+      }
+
+      ol li.active,
+      ol li:hover {
+        color: #e0e0e0;
+      }
+
+      ol li {
+        color: #888;
+      }
+
+      .comments {
+        color: #777 !important;
+      }
+
+      footer {
+        border-top-color: #333;
+      }
+
+      .meta {
+        color: #777;
+      }
+    }
+
     a:visited {
       color: #004c65;
     }
@@ -55,7 +100,8 @@
     }
 
     .comments {
-      color: #999; !important
+      color: #999;
+      !important
     }
 
     footer {
@@ -63,26 +109,34 @@
       padding-top: 10px;
     }
 
-    .meta { color: #999; }
+    .meta {
+      color: #999;
+    }
   </style>
 
 </head>
+
 <body>
   <div class='row'>
     <header class='small-12 columns'>
       <h1 class='text-center'>Hacker News Confidence</h1>
       <p class='text-center'>Less annoying hacker news. (<a onclick="toggle('explain')">What is this?</a>)</p>
-      <p id='explain'>This site scrapes Hacker News once every 30 minutes, then sorts according to <a href="http://www.evanmiller.org/how-not-to-sort-by-average-rating.html">this formula</a>, with upvotes as positive signals and comments as negative ones. In my experience, the best articles to read on HN are the ones with a high upvote-to-discussion ratio. Mostly because controversial pieces tend to produce a disproportionate number of comments compared to upvotes.</p>
+      <p id='explain'>This site scrapes Hacker News once every 30 minutes, then sorts according to <a
+          href="http://www.evanmiller.org/how-not-to-sort-by-average-rating.html">this formula</a>, with upvotes as
+        positive signals and comments as negative ones. In my experience, the best articles to read on HN are the ones
+        with a high upvote-to-discussion ratio. Mostly because controversial pieces tend to produce a disproportionate
+        number of comments compared to upvotes.</p>
     </header>
   </div>
   <div class='row'>
     <div class='small-12 medium-10 medium-offset-1 columns'>
-      <br/>
+      <br />
       <ol>
         {{ range $i, $n := .Items }}
-        <li {{ if lt $i 10 }}class='active'{{ end }}>
-          <a href="{{ .Link }}">{{ .Title }}</a> 
-          <span class='meta'>{{.Points}} upvotes, <a class="comments" href="{{ .CommentsLink }}">{{ .Comments }} comments</a></span>
+        <li {{ if lt $i 10 }}class='active' {{ end }}>
+          <a href="{{ .Link }}">{{ .Title }}</a>
+          <span class='meta'>{{.Points}} upvotes, <a class="comments" href="{{ .CommentsLink }}">{{ .Comments }}
+              comments</a></span>
         </li>
         {{ end }}
       </ol>
@@ -90,7 +144,8 @@
   </div>
   <div class='row'>
     <footer>
-      <p class='text-center'>Last generated {{ .LastGen | fdate }}. Source <a href='https://github.com/ejamesc/go-hn-confidence'>here</a>.</p> 
+      <p class='text-center'>Last generated {{ .LastGen | fdate }}. Source <a
+          href='https://github.com/ejamesc/go-hn-confidence'>here</a>.</p>
     </footer>
   </div>
 </body>
@@ -104,4 +159,5 @@
     }
   }
 </script>
+
 </html>
